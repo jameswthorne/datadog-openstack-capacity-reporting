@@ -28,7 +28,7 @@ __openstack-capacity-reporting.py__ needs to be copied to __/opt/datadog-agent/a
 
 __openstack-capacity-reporting.yaml__ needs to be copied to __/etc/dd-agent/conf.d__.
 
-Open __openstack-capacity-reporting.yaml__ in your favorite text editor and fill in the following parameters to match your OpenStack environment:
+Open __/etc/dd-agent/conf.d/openstack-capacity-reporting.yaml__ in your favorite text editor and fill in the following parameters to match your OpenStack environment:
 
 * auth_url
 * nova_endpoint
