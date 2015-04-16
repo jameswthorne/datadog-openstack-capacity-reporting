@@ -17,4 +17,4 @@ init_config:
   password: "PASSWORD"
 
 instances:
-	[{}]
+  [{}]
