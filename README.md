@@ -26,9 +26,9 @@ It is assumed you have already installed the datadog-agent on every compute node
 
 __openstack-capacity-reporting.py__ needs to be copied to __/opt/datadog-agent/agent/checks.d__.
 
-__openstack-capactiy-reporting.yaml__ needs to be copied to __/etc/dd-agent/conf.d__.
+__openstack-capacity-reporting.yaml__ needs to be copied to __/etc/dd-agent/conf.d__.
 
-Open __openstack-capactiy-reporting.yaml__ in your favorite text editor and fill in the following parameters to match your environment:
+Open __openstack-capacity-reporting.yaml__ in your favorite text editor and fill in the following parameters to match your OpenStack environment:
 
 * auth_url
 * nova_endpoint
@@ -39,7 +39,7 @@ Open __openstack-capactiy-reporting.yaml__ in your favorite text editor and fill
 Test
 ----
 
-If you don't already have the packages installed, install __tornado__ with `pip` and __python-ntplib__ with `apt-get` otherwise you may encounter errors.
+If you don't already have the packages installed, install __tornado__ with `pip` and __python-ntplib__ with `apt-get` otherwise you may encounter errors running the tests below.
 
 The first step to ensuring the plugin is working properly is to change into user __dd-agent__ home directory, `cd /opt/datadog-agent/agent`, and run the following command:
 
@@ -57,6 +57,6 @@ Finally, run the following command to ensure the plugin really is working proper
 
 	/etc/init.d/datadog-agent info
 
-There will be a __Checks__ section that lists each custom plugin. The __openstack-capacity-reporting__ plugin should be listed and should state __[OK]__.
+There will be a __Checks__ section that lists each custom plugin. The __openstack-capacity-reporting__ plugin should be listed and should report __[OK]__. Otherwise, it will report something else that will allow you to begin troubleshooting.
 
-At this point, you can tail the Datadog Agent logs, `tail -f /var/log/datadog/*.log`, to see the plugin is doing its job.
+At this point, you can tail the Datadog Agent logs, `tail -f /var/log/datadog/*.log`, to see what metrics the plugin is uploading to Datadog.
