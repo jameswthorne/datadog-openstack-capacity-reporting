@@ -1,0 +1,20 @@
+# Example init_config
+#
+# init_config:
+#   auth_url: "http://10.240.0.100:5000/v2.0/tokens"
+#   nova_endpoint: "http://10.240.0.100:8774/v3"
+#   tenant_name: "datadog"
+#   username: "datadog"
+#   password: "This should be a complicated password"
+#
+# Leave instances as is.
+#
+init_config:
+  auth_url: "AUTH_URL"
+  nova_endpoint: "NOVA_ENDPOINT"
+  tenant_name: "TENANT_NAME"
+  username: "USERNAME"
+  password: "PASSWORD"
+
+instances:
+	[{}]
