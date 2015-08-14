@@ -3,7 +3,7 @@ Overview
 
 This plugin has _only_ been tested on __OpenStack Juno__ running on top of __Ubuntu Server 14.04.1__ using __Python 2.7.6__.
 
-This plugin is intended to be installed on every compute node in your OpenStacak environment.
+This plugin is intended to be installed on every compute node in your OpenStack environment.
 
 Once installed, this plugin will query the OpenStack Nova API to gather the following metrics for the particular compute node the datadog-agent is running on:
 
@@ -39,7 +39,7 @@ Open __/etc/dd-agent/conf.d/openstack-capacity-reporting.yaml__ in your favorite
 Test
 ----
 
-If you don't already have the packages installed, install __tornado__ with `pip` and __python-ntplib__ with `apt-get` otherwise you may encounter errors running the tests below.
+If you don't already have the packages installed, install __tornado__ with `pip` and __python-ntplib__ with `apt-get`, otherwise you may encounter errors running the tests below.
 
 The first step to ensuring the plugin is working properly is to change into user __dd-agent__ home directory, `cd /opt/datadog-agent/agent`, and run the following command:
 
